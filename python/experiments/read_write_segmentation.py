@@ -26,7 +26,7 @@ db = DAVISLoader(year=cfg.YEAR,phase=cfg.PHASE)
 io.imwrite_indexed('/tmp/anno_indexed.png',db[0].annotations[0])
 
 # Read an image in a temporary file
-an,_ = io.imread_indexed('/tmp/anno_indexed.png')
+an = io.imread_indexed('/tmp/anno_indexed.png')
 
 cv2.imshow("Segmentation",cfg.palette[an][...,[2,1,0]])
 cv2.waitKey()

@@ -66,7 +66,7 @@ def db_eval_boundary(foreground_mask,gt_mask,bound_th=0.008):
 	if precision + recall == 0:
 		F = 0
 	else:
-		F = 2*precision*recall/(precision+recall);
+		F = 2*precision*recall / (precision+recall);
 
 	return F
 
@@ -125,7 +125,7 @@ def seg2bmap(seg,width=None,height=None):
 			for y in range(h):
 				if b[y,x]:
 					j = 1+floor((y-1)+height / h)
-					i = 1+floor((x-1)+width  / h)
+					i = 1+floor((x-1)+width / h)
 					bmap[j,i] = 1;
 
 	return bmap

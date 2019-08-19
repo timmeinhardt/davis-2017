@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 
+# set(Python_ADDITIONAL_VERSIONS 3)
+
 project( boost.numpy )
 add_definitions(-fpermissive)
 
@@ -20,6 +22,9 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/libs/numpy/cmake ${CMAKE_MODULE_PATH
 #     CACHE PATH "Output directory for executables and DLL's.")
 
 # find required python packages
+# find_package(PythonInterp 3 REQUIRED)
+# find_package(PythonLibsNew   3 REQUIRED)
+# find_package(NumPy REQUIRED python3)
 find_package(PythonInterp REQUIRED)
 find_package(PythonLibsNew REQUIRED)
 find_package(NumPy REQUIRED)
@@ -30,6 +35,7 @@ find_package(NumPy REQUIRED)
 # set(Boost_USE_MULTITHREADED ON)
 # set(Boost_USE_STATIC_RUNTIME ON)
 find_package(Boost COMPONENTS python REQUIRED)
+# find_package(Boost COMPONENTS python REQUIRED)
 
 message( STATUS "Found Boost" )
 #message( STATUS "found boost:"

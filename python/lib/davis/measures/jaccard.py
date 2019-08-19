@@ -31,4 +31,4 @@ def db_eval_iou(annotation,segmentation):
         return 1
     else:
         return np.sum((annotation & segmentation)) / \
-                np.sum((annotation | segmentation),dtype=np.float32)
+                np.sum((annotation | segmentation), dtype=np.float32)

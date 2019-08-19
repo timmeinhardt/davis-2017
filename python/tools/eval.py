@@ -90,7 +90,10 @@ if __name__ == '__main__':
     evaluation['dataset'][metric][statistic],3) for metric,statistic
     in itertools.product(args.metrics,cfg.EVAL.STATISTICS)])
 
-  print str(table) + "\n"
+  # print(evaluation['sequence']['camel']['J']['raw'])
+  # for s_name, s_eval in evaluation['sequence'].items():
+  #   print(f"{s_name} - {s_eval['J']['mean'][0]:.2f}")
+  print(str(table) + "\n")
 
   # Save results
   if args.output is not None:

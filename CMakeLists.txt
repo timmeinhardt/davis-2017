@@ -8,6 +8,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 project( davis )
+# set(Python_ADDITIONAL_VERSIONS 3)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
@@ -21,6 +22,11 @@ find_package(NumPy REQUIRED)
 find_package(Boost COMPONENTS python)
 find_package(PythonInterp 2.7.6 REQUIRED)
 find_package(PythonLibs   2.7.6 REQUIRED)
+
+# find_package(NumPy REQUIRED python3)
+# find_package(Boost COMPONENTS python3)
+# find_package(PythonInterp 3 REQUIRED)
+# find_package(PythonLibs   3 REQUIRED)
 
 include_directories( ${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS}
 	${NUMPY_INCLUDE_DIRS} cpp cpp/Boost.NumPy cpp/polycont)

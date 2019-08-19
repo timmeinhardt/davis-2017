@@ -107,7 +107,7 @@ def db_read_sequences(year=None,db_phase=None):
     else:
       sequences = filter(
           lambda s:s.set == db_phase.value,sequences)
-  return sequences
+  return list(sequences)
 
 # Load all sequences
 __C.SEQUENCES = dict([(sequence.name,sequence) for sequence in

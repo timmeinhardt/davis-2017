@@ -24,7 +24,7 @@ from ..misc.io import imread_indexed,imwrite_indexed
 def _load_annotation(filename,single_object):
   """ Load image given filename."""
 
-  annotation,_ = imread_indexed(filename)
+  annotation = imread_indexed(filename)
 
   if single_object:
     annotation = (annotation != 0).astype(np.uint8)
