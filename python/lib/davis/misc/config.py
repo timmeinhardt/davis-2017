@@ -49,7 +49,8 @@ __C.PHASE = phase.VAL
 __C.MULTIOBJECT = True
 
 # Root folder of project
-__C.PATH.ROOT = osp.abspath(osp.join(osp.dirname(__file__), '../../../..'))
+# __C.PATH.ROOT = osp.abspath(osp.join(osp.dirname(__file__), '../../../..'))
+__C.PATH.ROOT = osp.abspath(osp.join(osp.dirname(__file__), '..'))
 
 # Data folder
 __C.PATH.DATA = osp.abspath(osp.join(__C.PATH.ROOT, 'data/DAVIS'))
